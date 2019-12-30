@@ -2,7 +2,7 @@ from fonAPI.fonAPI import FonApi
 
 #My token : f36fc5968a418f32aca94157b7898c2cf296f189bcefa8de
 
-#Features avalaibles
+#Features availables
 """ 
 DeviceName
 Brand
