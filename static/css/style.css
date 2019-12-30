@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.search{
+    text-align: center;
+}
+
+input[type="search"]{
+    width: 50%;
+    padding: 10px;
+}
+
+/*Button*/
+button[type="submit"]{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+p{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Inria Serif', serif;
+    color: #3377FF;
+    margin: 5px;
+}
+
+/*Table style*/
+.data{
+    width: 70%;
+    margin: 30px auto;
+}
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+}
+  
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    padding: 15px;
+}

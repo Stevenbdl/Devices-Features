@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <!--Font awesome-->
+    <link href="https://fonts.googleapis.com/css?family=Inria+Serif|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<body>
+    
+    <p align="left">Available Mobile Device Descriptions: {{ totalDevices }}</p>
+    <center><h1>Mobile Device features</h1></center><br><br><br>
+
+    <div class="search">
+        <form action="" method="post">
+            <input type="search" name="search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+
+    {% if not firstSearch %}
+        <div class="data">
+            <center><h1>Models</h1></center>
+            {% for phone in phones %}
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Status</th>
+                        <th>CPU</th>
+                        <th>OS</th>
+                        <th>Announced</th>
+                        <th>Speed</th>
+                    </tr>
+                    <tr>
+                        <td>{{ phone['DeviceName'] }}</td>
+                        <td>{{ phone['Brand'] }}</td>
+                        <td>{{ phone['status'] }}</td>
+                        <td>{{ phone['cpu'] }}</td>
+                        <td>{{ phone['os'] }}</td>
+                        <td>{{ phone['announced'] }}</td>
+                        <td>{{ phone['speed'] }}</td>
+                    </tr>
+                </table><br>
+                <hr>
+            {% endfor %}
+        </div>
+    {% else %}
+        <center><h1>Write and find the characteristics of a device</h1></center>
+    {% endif %}
+
+</body>
+</html>
